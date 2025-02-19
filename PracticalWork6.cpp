@@ -9,7 +9,11 @@ int main()
     Book book2 = Book("Title2","Author1","Publisher", 1920);
     Book book3 = Book("Title1","Author2","Publisher", 2000);
     Book book4 = Book("Title2","Author2","Publisher", 1995);
-    
+    Book myBook = Book();
+
+    cout << endl;
+    myBook.PrintInfo();
+
     vector<Book> arr = vector<Book>{ book1, book2, book3, book4 };
     vector<Book> books = Book::CreateBookList(arr);
 

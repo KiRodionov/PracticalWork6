@@ -18,7 +18,15 @@ Book::Book() {
 		cin >> Publisher;
 		cout << "Enter the Year Of Publication: " << endl;
 		cin >> YearOfPublication;
-		correct = true;
+		if (cin.good()) {
+			correct = true;
+		}
+		else {
+			cin.clear();
+			cin.ignore(INT_MAX, '\n');
+			cout << "Invalid input; please re-enter." << endl;
+
+		}
 	} while (!correct);
 }
 
